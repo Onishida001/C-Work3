@@ -1,0 +1,43 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+    float ps, alt, imc;
+
+    printf("Digite seu peso (em kg): ");
+    scanf("%f", &ps);
+
+    printf("Digite sua altura (em metros): ");
+    scanf("%f", &alt);
+
+    imc = ps / (alt * alt);
+
+    printf("\nSeu IMC e: %.2f\n", imc);
+
+    if (imc < 16) {
+        printf("Resultado: Magreza gravissima!\n");
+    }
+    else if (imc <= 16.9) {
+        printf("Resultado: Magreza moderada.\n");
+    }
+    else if (imc <= 18.5) {
+        printf("Resultado: Magreza leve.\n");
+    }
+    else if (imc <= 24.9) {
+        printf("Resultado: Parabens, peso ideal!\n");
+    }
+    else if (imc <= 29.9) {
+        printf("Resultado: Sobrepeso.\n");
+    }
+    else if (imc <= 34.9) {
+        printf("Resultado: Obesidade Grau I.\n");
+    }
+    else if (imc <= 39.9) {
+        printf("Resultado: Obesidade Grau II.\n");
+    }
+    else {
+        printf("Resultado: Obesidade Grau III.\n");
+    }
+
+    return 0;
+}
