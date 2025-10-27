@@ -3,29 +3,29 @@
 #include <math.h> 
 
 int main() {
-    int numLados;
-    float medidaLado = 0, area;
+    int nl;
+    float ml = 0, a;
 
     printf("Digite o numero de lados do poligono (3, 4 ou 5): ");
-    scanf("%d", &numLados);
+    scanf("%i", &nl);
 
-    if (numLados == 3) {
+    if (nl == 3) {
         printf("Digite a medida do lado (em cm): ");
-        scanf("%f", &medidaLado);
+        scanf("%f", &ml);
         
-        area = (medidaLado * medidaLado * sqrt(3)) / 4.0;
-        printf("\nTRIANGULO\n");
-        printf("Area: %.2f cm2\n", area);
+        area = (ml * ml * sqrt(3)) / 4.0;
+        printf("TRIANGULO\n");
+        printf("Area: %.2f cm2\n", a);
     }
-    else if (numLados == 4) {
+    else if (nl == 4) {
         printf("Digite a medida do lado (em cm): ");
-        scanf("%f", &medidaLado);
+        scanf("%f", &ml);
         
-        area = medidaLado * medidaLado;
+        a = ml * ml;
         printf("\nQUADRADO\n");
-        printf("Area: %.2f cm2\n", area);
+        printf("Area: %.2f cm2\n", a);
     }
-    else if (numLados == 5) {
+    else if (nl == 5) {
         printf("\nPENTAGONO\n");
     }
     else {
